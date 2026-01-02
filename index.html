@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Junaid Ahmed Memon — IBM Certified Full-Stack Developer & AI Engineer. BS Computer Science student at SZABIST, building real-world digital products." />
+  <meta name="author" content="Junaid Ahmed Memon" />
+  <meta property="og:title" content="Junaid Ahmed Memon — Full-Stack Developer & AI Engineer" />
+  <meta property="og:description" content="IBM Certified Full-Stack Developer & AI Engineer. Building intelligent digital products at the intersection of software engineering and AI." />
+  <meta property="og:type" content="website" />
+  <title>Junaid Ahmed Memon — Full-Stack Developer & AI Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav-header" id="navHeader">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="#home" class="nav-logo" aria-label="Junaid Ahmed Memon — Home">
+        <span class="logo-mark">JM</span>
+        <span class="logo-name">Junaid Memon</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#work" class="nav-link" data-section="work">Work</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#stack" class="nav-link" data-section="stack">Stack</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-outline">Hire Me</a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+      <ul class="mobile-links" role="list">
+        <li><a href="#work" class="mobile-link">Work</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#stack" class="mobile-link">Stack</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <div class="availability-badge hero-reveal" data-delay="0">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Open to Opportunities &amp; Collaborations
+        </div>
+
+        <h1 class="hero-heading hero-reveal" id="heroHeading" data-delay="100">
+          <span class="heading-line">Junaid Ahmed</span>
+          <span class="heading-line heading-accent">Memon</span>
+          <span class="heading-line heading-sub">Full-Stack Developer &amp; AI Engineer</span>
+        </h1>
+
+        <p class="hero-desc hero-reveal" data-delay="200">
+          IBM Certified Full-Stack Software Developer and AI Engineer. 3rd year BS Computer Science student
+          at SZABIST, building real-world web applications and intelligent systems that solve actual problems.
+        </p>
+
+        <div class="hero-ctas hero-reveal" data-delay="300">
+          <a href="#work" class="btn btn-primary btn-lg">
+            View my projects
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost btn-lg">Let's connect</a>
+        </div>
+
+        <div class="hero-stats hero-reveal" data-delay="400">
+          <div class="stat">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">rd</span>
+            <span class="stat-label">Year @ SZABIST</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Projects built</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="2">0</span><span class="stat-suffix"></span>
+            <span class="stat-label">IBM Certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span>·</span>
+        <span>Node.js</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>Machine Learning</span><span>·</span>
+        <span>MongoDB</span><span>·</span>
+        <span>Express.js</span><span>·</span>
+        <span>IBM Cloud</span><span>·</span>
+        <span>Docker</span><span>·</span>
+        <span>PostgreSQL</span><span>·</span>
+        <span>AI Engineering</span><span>·</span>
+        <span>REST APIs</span><span>·</span>
+        <span>JavaScript</span><span>·</span>
+        <span>React</span><span>·</span>
+        <span>Node.js</span><span>·</span>
+        <span>Python</span><span>·</span>
+        <span>Machine Learning</span><span>·</span>
+        <span>MongoDB</span><span>·</span>
+        <span>Express.js</span><span>·</span>
+        <span>IBM Cloud</span><span>·</span>
+        <span>Docker</span><span>·</span>
+        <span>PostgreSQL</span><span>·</span>
+        <span>AI Engineering</span><span>·</span>
+        <span>REST APIs</span><span>·</span>
+        <span>JavaScript</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <section class="section work-section" id="work" aria-labelledby="workHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Sample Projects</span>
+          <h2 class="section-title" id="workHeading">Things I've built</h2>
+          <p class="section-desc">A selection of projects built to sharpen my skills across full-stack development and AI engineering.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1 — ZabDrive -->
+          <article class="project-card project-card--featured reveal" aria-label="ZabDrive project">
+            <div class="project-card-inner">
+              <div class="project-preview">
+                <div class="project-mockup" aria-hidden="true">
+                  <div class="mockup-browser">
+                    <div class="browser-bar">
+                      <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                      <span class="browser-url">zabdrive.szabist.edu.pk</span>
+                    </div>
+                    <div class="browser-content ledger-ui">
+                      <div class="lu-sidebar">
+                        <div class="lu-logo"></div>
+                        <div class="lu-nav-items">
+                          <div class="lu-nav-item lu-active"></div>
+                          <div class="lu-nav-item"></div>
+                          <div class="lu-nav-item"></div>
+                          <div class="lu-nav-item"></div>
+                        </div>
+                      </div>
+                      <div class="lu-main">
+                        <div class="lu-chart-area">
+                          <div class="lu-chart-bars">
+                            <div class="lu-bar" style="--h:55%"></div>
+                            <div class="lu-bar" style="--h:70%"></div>
+                            <div class="lu-bar" style="--h:45%"></div>
+                            <div class="lu-bar lu-bar-accent" style="--h:85%"></div>
+                            <div class="lu-bar" style="--h:60%"></div>
+                            <div class="lu-bar" style="--h:75%"></div>
+                            <div class="lu-bar" style="--h:50%"></div>
+                          </div>
+                        </div>
+                        <div class="lu-cards">
+                          <div class="lu-card"></div>
+                          <div class="lu-card"></div>
+                          <div class="lu-card"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="tag">Full-Stack</span>
+                  <span class="tag">React 19</span>
+                  <span class="tag">Node.js</span>
+                  <span class="tag">2025</span>
+                </div>
+                <h3 class="project-title">ZabDrive</h3>
+                <p class="project-desc">
+                  A full-stack Bus Transportation Management System for SZABIST Gharo Campus. Built with React 19, Vite, Tailwind CSS on the frontend and Node.js, Express, Prisma ORM with PostgreSQL on the backend. Features JWT authentication, RBAC (role-based access control), real-time bus tracking and route management.
+                </p>
+                <div class="project-impact">
+                  <div class="impact-item">
+                    <span class="impact-number">RBAC</span>
+                    <span class="impact-label">Auth System</span>
+                  </div>
+                  <div class="impact-item">
+                    <span class="impact-number">REST</span>
+                    <span class="impact-label">API Design</span>
+                  </div>
+                </div>
+                <div class="project-links">
+                  <a href="https://github.com/junaidmemon1" class="btn btn-sm btn-primary project-cta" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 — AI Chatbot -->
+          <article class="project-card reveal" aria-label="AI Chatbot project">
+            <div class="project-card-inner">
+              <div class="project-preview">
+                <div class="project-mockup mockup-pulse" aria-hidden="true">
+                  <div class="pulse-ui">
+                    <div class="pulse-header">
+                      <div class="pulse-avatar"></div>
+                      <div class="pulse-header-text">
+                        <div class="pulse-name"></div>
+                        <div class="pulse-sub"></div>
+                      </div>
+                    </div>
+                    <div class="pulse-chart">
+                      <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+                        <polyline points="0,50 25,40 50,25 75,30 100,15 125,20 150,8 175,14 200,5" fill="none" stroke="var(--accent)" stroke-width="2.5"/>
+                        <polyline points="0,50 25,40 50,25 75,30 100,15 125,20 150,8 175,14 200,5 200,60 0,60" fill="var(--accent)" fill-opacity="0.12" stroke="none"/>
+                      </svg>
+                    </div>
+                    <div class="pulse-metrics">
+                      <div class="pulse-metric"><span>NLP</span><small>Engine</small></div>
+                      <div class="pulse-metric"><span>IBM</span><small>Watson</small></div>
+                      <div class="pulse-metric"><span>99%</span><small>Uptime</small></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="tag">AI / ML</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">IBM Watson</span>
+                </div>
+                <h3 class="project-title">AI Customer Support Bot</h3>
+                <p class="project-desc">
+                  Intelligent customer support chatbot built with Python and IBM Watson NLP. Handles FAQs, sentiment analysis, and escalation logic. Deployed on IBM Cloud with a React frontend for real-time conversation.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/junaidmemon1" class="btn btn-sm btn-primary project-cta" target="_blank" rel="noopener noreferrer">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 — MARB Studio -->
+          <article class="project-card reveal" aria-label="MARB Studio internship project">
+            <div class="project-card-inner">
+              <div class="project-preview">
+                <div class="project-mockup mockup-forge" aria-hidden="true">
+                  <div class="terminal-ui">
+                    <div class="terminal-header">
+                      <span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+                      <span class="terminal-title">marb-studio — brand analysis</span>
+                    </div>
+                    <div class="terminal-body">
+                      <div class="terminal-line"><span class="t-prompt">$</span> analyze competitors</div>
+                      <div class="terminal-line t-success">✓ Scraped 5 brand datasets</div>
+                      <div class="terminal-line"><span class="t-prompt">$</span> generate palette report</div>
+                      <div class="terminal-line t-dim">Building colour psychology doc…</div>
+                      <div class="terminal-line t-success">✓ Report exported</div>
+                      <div class="terminal-line"><span class="t-prompt">$</span> <span class="t-cursor">▋</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="tag">Internship</span>
+                  <span class="tag">Data Analysis</span>
+                  <span class="tag">MARB Studio</span>
+                </div>
+                <h3 class="project-title">MARB Studio — Brand Intelligence</h3>
+                <p class="project-desc">
+                  Remote internship project for MARB Studio (apparel brand). Performed competitor analysis across 5 Pakistani fashion brands, built a colour psychology research document, and structured pricing/stock data in Excel dashboards.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/junaidmemon1" class="btn btn-sm btn-primary project-cta" target="_blank" rel="noopener noreferrer">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 — Compiler Construction -->
+          <article class="project-card reveal" aria-label="Compiler project">
+            <div class="project-card-inner">
+              <div class="project-preview">
+                <div class="project-mockup mockup-relay" aria-hidden="true">
+                  <div class="relay-ui">
+                    <div class="relay-channels">
+                      <div class="rc-item rc-active"></div>
+                      <div class="rc-item"></div>
+                      <div class="rc-item"></div>
+                    </div>
+                    <div class="relay-messages">
+                      <div class="relay-msg relay-msg-in"><div class="relay-bubble"></div></div>
+                      <div class="relay-msg relay-msg-out"><div class="relay-bubble relay-bubble-out"></div></div>
+                      <div class="relay-msg relay-msg-in"><div class="relay-bubble" style="width:60%"></div></div>
+                      <div class="relay-typing"><span></span><span></span><span></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project-meta">
+                <div class="project-tags">
+                  <span class="tag">JavaCC</span>
+                  <span class="tag">Compiler</span>
+                  <span class="tag">Academic</span>
+                </div>
+                <h3 class="project-title">Lexer &amp; Parser — JavaCC</h3>
+                <p class="project-desc">
+                  Academic compiler construction project using JavaCC. Built a Lexer and recursive descent Parser with full LL(1)/LL(2) grammar support, LOOKAHEAD directives, FIRST/FOLLOW set analysis, and left factoring. Deep dive into formal language theory.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/junaidmemon1" class="btn btn-sm btn-primary project-cta" target="_blank" rel="noopener noreferrer">GitHub <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about-section" id="about" aria-labelledby="aboutHeading">
+      <div class="container about-grid">
+        <div class="about-visual reveal">
+          <div class="portrait-wrap">
+            <div class="portrait-frame">
+              <div class="portrait-initials" aria-label="Junaid Ahmed Memon">JM</div>
+            </div>
+            <div class="about-accent-card card-coffee" aria-hidden="true">
+              <span>📍</span> Karachi, Sindh — Pakistan
+            </div>
+            <div class="about-accent-card card-status" aria-hidden="true">
+              <span class="pulse-dot"></span> Open to opportunities
+            </div>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="reveal">
+            <span class="section-eyebrow">About Me</span>
+            <h2 class="section-title" id="aboutHeading">Developer who builds, not just learns</h2>
+          </div>
+          <div class="reveal" data-delay="100">
+            <p class="about-text">
+              I'm <strong>Junaid Ahmed Memon</strong> — an IBM Certified Full-Stack Software Developer and AI Engineer currently in my 3rd year of BS Computer Science at <strong>SZABIST</strong>. I don't just study concepts — I ship real projects.
+            </p>
+            <p class="about-text">
+              My stack revolves around the MERN ecosystem, cloud deployment, and AI integration. I've worked on everything from transportation management systems to AI chatbots, brand intelligence tools, and compiler construction. Every project teaches me something new.
+            </p>
+            <p class="about-text">
+              Currently doing a remote internship at <strong>MARB Studio</strong> (an apparel brand) where I'm applying data analysis and research skills in a real business environment. Previously led the development of <strong>ZabDrive</strong> — a full-stack bus management system for my university.
+            </p>
+          </div>
+
+          <div class="about-values reveal" data-delay="200">
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <strong>IBM Certified</strong>
+                <span>Full-Stack Development &amp; AI Engineering certifications from IBM.</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <strong>Real-World Builder</strong>
+                <span>Every project I take on has a real use case — no tutorial clones.</span>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div>
+                <strong>Always Learning</strong>
+                <span>Actively expanding into AI/ML, cloud architecture, and system design.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section stack-section" id="stack" aria-labelledby="stackHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Tech Stack</span>
+          <h2 class="section-title" id="stackHeading">Tools I work with</h2>
+          <p class="section-desc">Technologies I've used in actual projects — not just read about.</p>
+        </div>
+
+        <div class="stack-categories">
+          <div class="stack-category reveal">
+            <h3 class="stack-cat-title">Frontend</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <div class="stack-icon si-react" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 9.861A2.139 2.139 0 1 0 12 14.139 2.139 2.139 0 1 0 12 9.861zM6.008 16.255l-.472-.12C2.018 15.246 0 13.737 0 11.996s2.018-3.25 5.536-4.139l.472-.12.133.468a23.53 23.53 0 0 0 1.363 3.578l.101.213-.101.213a23.307 23.307 0 0 0-1.363 3.578l-.133.468zM5.317 8.95c-2.674.751-4.315 1.9-4.315 3.046 0 1.145 1.641 2.294 4.315 3.046a24.95 24.95 0 0 1 1.182-3.046A24.752 24.752 0 0 1 5.317 8.95z"/></svg>
+                </div>
+                <span class="stack-name">React 19</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-css" aria-hidden="true">CSS</div>
+                <span class="stack-name">HTML / CSS / JS</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-next" aria-hidden="true">TW</div>
+                <span class="stack-name">Tailwind CSS</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-ts" aria-hidden="true">TS</div>
+                <span class="stack-name">TypeScript</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-category reveal" data-delay="100">
+            <h3 class="stack-cat-title">Backend &amp; AI</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <div class="stack-icon si-node" aria-hidden="true">JS</div>
+                <span class="stack-name">Node.js / Express</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-python" aria-hidden="true">Py</div>
+                <span class="stack-name">Python</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-gql" aria-hidden="true">AI</div>
+                <span class="stack-name">Machine Learning</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-go" aria-hidden="true">IBM</div>
+                <span class="stack-name">IBM Watson / Cloud</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack-category reveal" data-delay="200">
+            <h3 class="stack-cat-title">Database &amp; DevOps</h3>
+            <div class="stack-grid">
+              <div class="stack-item">
+                <div class="stack-icon si-pg" aria-hidden="true">PG</div>
+                <span class="stack-name">PostgreSQL</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-redis" aria-hidden="true">M</div>
+                <span class="stack-name">MongoDB</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-docker" aria-hidden="true">🐳</div>
+                <span class="stack-name">Docker</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:65%"></div></div>
+              </div>
+              <div class="stack-item">
+                <div class="stack-icon si-aws" aria-hidden="true">GIT</div>
+                <span class="stack-name">Git / GitHub</span>
+                <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / EDUCATION -->
+    <section class="section experience-section" id="experience" aria-labelledby="expHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Experience &amp; Education</span>
+          <h2 class="section-title" id="expHeading">My journey so far</h2>
+        </div>
+
+        <ol class="timeline" aria-label="Experience and education history">
+          <li class="timeline-item reveal">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Remote Intern — Data &amp; Brand Research</h3>
+                  <span class="timeline-company">MARB Studio (Apparel Brand)</span>
+                </div>
+                <span class="timeline-period">2025 — Present</span>
+              </div>
+              <p class="timeline-desc">Performing competitor analysis across major Pakistani apparel brands (Outfitters, Breakout, Bonanza Satrangi, Alkaram Studio, Generation). Built colour psychology research documents and structured pricing/stock data into Excel dashboards for strategic brand decisions.</p>
+              <div class="timeline-tags">
+                <span class="tag tag-sm">Data Analysis</span>
+                <span class="tag tag-sm">Excel</span>
+                <span class="tag tag-sm">Brand Research</span>
+                <span class="tag tag-sm">Market Intelligence</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal" data-delay="100">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Lead Developer — ZabDrive</h3>
+                  <span class="timeline-company">SZABIST University (Group Project)</span>
+                </div>
+                <span class="timeline-period">Spring 2026</span>
+              </div>
+              <p class="timeline-desc">Led a 3-member team to build ZabDrive — a full-stack Bus Transportation Management System for SZABIST Gharo Campus. Designed the system architecture, implemented JWT authentication with RBAC, built RESTful APIs using Node.js/Express/Prisma, and delivered the React 19 frontend.</p>
+              <div class="timeline-tags">
+                <span class="tag tag-sm">React 19</span>
+                <span class="tag tag-sm">Node.js</span>
+                <span class="tag tag-sm">Prisma ORM</span>
+                <span class="tag tag-sm">PostgreSQL</span>
+                <span class="tag tag-sm">JWT</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal" data-delay="200">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">IBM Certified Full-Stack Developer &amp; AI Engineer</h3>
+                  <span class="timeline-company">IBM (via Coursera)</span>
+                </div>
+                <span class="timeline-period">2024 — 2025</span>
+              </div>
+              <p class="timeline-desc">Completed IBM's Full-Stack Software Developer and AI Engineering professional certificate programs. Covered React, Node.js, Python, Django, Flask, Docker, Kubernetes, AI/ML fundamentals, IBM Watson, and cloud deployment on IBM Cloud.</p>
+              <div class="timeline-tags">
+                <span class="tag tag-sm">IBM Certified</span>
+                <span class="tag tag-sm">Full-Stack</span>
+                <span class="tag tag-sm">AI Engineering</span>
+                <span class="tag tag-sm">Cloud</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="timeline-item reveal" data-delay="300">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">BS Computer Science — 3rd Year</h3>
+                  <span class="timeline-company">SZABIST, Gharo Campus</span>
+                </div>
+                <span class="timeline-period">2022 — Present</span>
+              </div>
+              <p class="timeline-desc">Currently in 5th semester, studying Software Engineering, Compiler Construction, Data Structures, and Database Systems. Active participant in university software projects and academic competitions.</p>
+              <div class="timeline-tags">
+                <span class="tag tag-sm">Software Engineering</span>
+                <span class="tag tag-sm">Compiler Construction</span>
+                <span class="tag tag-sm">Data Structures</span>
+                <span class="tag tag-sm">SZABIST</span>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="contact-inner reveal">
+          <div class="contact-copy">
+            <span class="section-eyebrow">Get in Touch</span>
+            <h2 class="section-title" id="contactHeading">Let's work together</h2>
+            <p class="contact-desc">
+              I'm open to internship opportunities, freelance projects, collaborations, and entry-level roles in full-stack development or AI engineering. If you have something interesting, let's talk.
+            </p>
+            <div class="contact-details">
+              <a href="https://linkedin.com/in/junaid-memon-221548346" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                linkedin.com/in/junaid-memon-221548346
+              </a>
+              <a href="https://github.com/junaidmemon" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                github.com/junaidmemon1
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-group">
+                <label for="name" class="form-label">Your name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name" autocomplete="name" required aria-required="true" />
+                <span class="form-error" id="nameError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" autocomplete="email" required aria-required="true" />
+                <span class="form-error" id="emailError" role="alert" aria-live="polite"></span>
+              </div>
+              <div class="form-group">
+                <label for="project" class="form-label">Your message</label>
+                <textarea id="project" name="project" class="form-input form-textarea" placeholder="Tell me about the opportunity, project, or collaboration…" rows="4" required aria-required="true"></textarea>
+                <span class="form-error" id="projectError" role="alert" aria-live="polite"></span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                <span class="btn-text">Send message</span>
+                <span class="btn-loading" aria-hidden="true">Sending…</span>
+                <svg class="btn-icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+              <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Message sent! I'll get back to you soon.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">JM</span>
+        <span class="footer-tagline">Built from Karachi, Sindh 🇵🇰</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://github.com/junaidmemon1" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/junaid-memon-221548346" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footerYear">2026</span> Junaid Ahmed Memon · BS CS @ SZABIST · IBM Certified Full-Stack Developer &amp; AI Engineer</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <script src="js/theme.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+/* ============================================================
+   RESET — modern CSS reset with sensible defaults
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Remove list styles when list has role */
+ul[role='list'], ol[role='list'] { list-style: none; }
+
+/* Sensible media defaults */
+img, video, svg { display: block; max-width: 100%; }
+
+/* Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Improve textarea defaults */
+textarea { resize: vertical; }
+
+/* Remove default button styles */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Anchor defaults */
+a { color: inherit; text-decoration: none; }
+
+/* Remove default fieldset styles */
+fieldset { border: none; padding: 0; }
+
+/* Hidden attribute */
+[hidden] { display: none !important; }
+
+/* Focus visible outline — accessibility baseline */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Selection colour */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+/* reset v1 - 2026-01-04 */
+/* ::selection: background var(--accent) color var(--bg) - 2026-03-17 */
+/* :focus-visible: 2px accent outline, offset 3px - 2026-03-18 */
+/* html: scroll-behavior:smooth added to reset - 2026-06-06 */

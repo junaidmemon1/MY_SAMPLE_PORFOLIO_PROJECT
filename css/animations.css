@@ -1,0 +1,196 @@
+/* ============================================================
+   ANIMATIONS — scroll reveals, hero entrance, micro-interactions
+   ============================================================ */
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+  /* Prevent text from bleeding outside its container during animation */
+  overflow: hidden;
+  will-change: opacity, transform;
+}
+
+/* Restore overflow after animation so content isn't clipped */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+  overflow: visible;
+}
+
+/* Staggered delay via data-delay attribute (set in JS) */
+.reveal[data-delay="100"] { transition-delay: 100ms; }
+.reveal[data-delay="200"] { transition-delay: 200ms; }
+.reveal[data-delay="300"] { transition-delay: 300ms; }
+.reveal[data-delay="400"] { transition-delay: 400ms; }
+.reveal[data-delay="500"] { transition-delay: 500ms; }
+
+/* ── Hero section reveals ── */
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp var(--duration-slower) var(--ease-out) forwards;
+}
+
+.hero-reveal[data-delay="0"]   { animation-delay: 200ms; }
+.hero-reveal[data-delay="100"] { animation-delay: 350ms; }
+.hero-reveal[data-delay="200"] { animation-delay: 500ms; }
+.hero-reveal[data-delay="300"] { animation-delay: 650ms; }
+.hero-reveal[data-delay="400"] { animation-delay: 800ms; }
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Cursor ── */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  mix-blend-mode: exclusion;
+  will-change: transform;
+  transition: opacity var(--duration-fast);
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  transform: translate(-50%, -50%);
+  transition: width var(--duration-base) var(--ease-out),
+              height var(--duration-base) var(--ease-out),
+              opacity var(--duration-fast);
+}
+
+.cursor-ring.hovered {
+  width: 56px;
+  height: 56px;
+  border-color: var(--accent);
+}
+
+/* Hide custom cursor on touch/mobile */
+@media (hover: none) {
+  .cursor-dot, .cursor-ring { display: none; }
+}
+
+/* ── Page load fade ── */
+body {
+  animation: pageFadeIn 400ms ease-out both;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Heading line split effect ── */
+.heading-line {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ── Project card hover media ── */
+.project-card .project-preview {
+  transition: transform var(--duration-slow) var(--ease-out);
+  overflow: hidden;
+}
+
+.project-card:hover .project-preview .project-mockup {
+  transform: scale(1.03) translateY(-4px);
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+/* ── Skill bar animation (triggered by JS) ── */
+.skill-fill {
+  transition: transform 1.2s var(--ease-out);
+}
+
+/* ── Stack item hover glow ── */
+.stack-item:hover .stack-icon {
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
+}
+
+/* ── Timeline item entrance ── */
+.timeline-item.reveal.visible .timeline-marker {
+  animation: markerPop var(--duration-base) var(--ease-spring) both;
+  animation-delay: 0.15s;
+}
+
+@keyframes markerPop {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ── Btn hover state ── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translateX(100%);
+}
+
+/* ── Marquee pause on hover ── */
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Contact form field focus ── */
+.form-input {
+  transition: border-color var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+}
+
+.form-input:focus {
+  transform: translateY(-1px);
+}
+
+/* ── Testimonial card subtle entrance ── */
+.testimonial-card {
+  transition:
+    border-color var(--duration-base) var(--ease-out),
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+}
+/* hero-reveal: heroFadeUp keyframe, 5 delay steps - 2026-03-02 */
+/* hero delays: 200/350/500/650/800ms refined - 2026-03-03 */
+/* will-change:transform on .cursor-dot + .cursor-ring - 2026-04-03 */
+/* keyframes: orbFloat, heroFadeUp, blink, cursorBlink moved - 2026-04-07 */
+/* hero-reveal vs reveal: separate animation patterns - 2026-05-12 */
+/* body pageFadeIn: opacity 0->1 on load - 2026-06-04 */

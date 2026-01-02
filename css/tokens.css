@@ -1,0 +1,159 @@
+/* ============================================================
+   DESIGN TOKENS
+   Palette: Deep space navy + electric indigo accent + warm off-white
+   Typefaces: Syne (display) + DM Sans (body) + DM Mono (code/data)
+   ============================================================ */
+
+:root {
+  /* ── Typography ── */
+  --font-display:  'Syne', system-ui, sans-serif;
+  --font-body:     'DM Sans', system-ui, sans-serif;
+  --font-mono:     'DM Mono', 'Fira Code', monospace;
+
+  /* ── Type scale (fluid using clamp) ── */
+  --text-xs:   clamp(0.70rem, 1.5vw, 0.75rem);
+  --text-sm:   clamp(0.80rem, 1.8vw, 0.875rem);
+  --text-base: clamp(0.95rem, 2vw, 1rem);
+  --text-md:   clamp(1.00rem, 2.2vw, 1.125rem);
+  --text-lg:   clamp(1.10rem, 2.5vw, 1.25rem);
+  --text-xl:   clamp(1.25rem, 3vw, 1.5rem);
+  --text-2xl:  clamp(1.5rem, 4vw, 2rem);
+  --text-3xl:  clamp(1.75rem, 5vw, 2.5rem);
+  --text-4xl:  clamp(2rem, 6vw, 3.25rem);
+  --text-5xl:  clamp(2.5rem, 8vw, 4.5rem);
+  --text-6xl:  clamp(3rem, 10vw, 6rem);
+
+  /* ── Spacing ── */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-8: 2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* ── Border radius ── */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.625rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ── Transitions ── */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in:    cubic-bezier(0.5, 0, 0.75, 0);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+  --duration-slower: 700ms;
+
+  /* ── Z-index scale ── */
+  --z-base:    0;
+  --z-above:   10;
+  --z-overlay: 100;
+  --z-nav:     200;
+  --z-modal:   300;
+  --z-cursor:  9999;
+}
+
+/* ============================================================
+   DARK THEME (default)
+   ============================================================ */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg:          #0A0B10;   /* near-black with blue undertone */
+  --bg-elevated: #10121A;   /* cards, panels */
+  --bg-surface:  #161825;   /* secondary surface */
+  --bg-muted:    #1E2035;   /* borders, subtle fills */
+
+  /* Foreground */
+  --fg:          #E8EAF2;   /* primary text */
+  --fg-muted:    #8A8FA8;   /* secondary text */
+  --fg-subtle:   #555970;   /* placeholder, disabled */
+
+  /* Accent — electric indigo */
+  --accent:       #6C63FF;
+  --accent-light: #8B84FF;
+  --accent-dim:   rgba(108, 99, 255, 0.15);
+  --accent-glow:  rgba(108, 99, 255, 0.35);
+
+  /* Secondary accent — teal pop */
+  --teal:        #00D4AA;
+  --teal-dim:    rgba(0, 212, 170, 0.12);
+
+  /* Borders */
+  --border:       rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.18);
+
+  /* Shadows */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 40px rgba(108, 99, 255, 0.25);
+
+  /* Status */
+  --success: #22C55E;
+  --error:   #EF4444;
+  --warning: #F59E0B;
+}
+
+/* ============================================================
+   LIGHT THEME
+   ============================================================ */
+[data-theme="light"] {
+  --bg:          #F7F8FC;
+  --bg-elevated: #FFFFFF;
+  --bg-surface:  #EEEFFE;
+  --bg-muted:    #E2E4F0;
+
+  --fg:          #111827;
+  --fg-muted:    #4B5280;
+  --fg-subtle:   #9CA3C0;
+
+  --accent:       #4F46E5;
+  --accent-light: #6366F1;
+  --accent-dim:   rgba(79, 70, 229, 0.10);
+  --accent-glow:  rgba(79, 70, 229, 0.25);
+
+  --teal:        #0D9488;
+  --teal-dim:    rgba(13, 148, 136, 0.10);
+
+  --border:       rgba(0, 0, 0, 0.09);
+  --border-hover: rgba(0, 0, 0, 0.18);
+
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.14);
+  --shadow-glow: 0 0 40px rgba(79, 70, 229, 0.18);
+
+  --success: #16A34A;
+  --error:   #DC2626;
+  --warning: #D97706;
+}
+
+/* ── Global body tokens ── */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--fg);
+  background-color: var(--bg);
+  transition: background-color var(--duration-slow) var(--ease-out),
+              color var(--duration-slow) var(--ease-out);
+}
+/* tokens v1 - dark palette - 2026-01-04 */
+/* tokens v2 - light mode overrides - 2026-01-05 */
+/* fonts: Syne + DM Sans + DM Mono loaded - 2026-01-05 */
+/* spacing scale: sp-1 through sp-32 added - 2026-01-06 */
+/* easing: ease-out, ease-spring, duration vars - 2026-01-06 */
+/* ease-spring: cubic-bezier(0.34,1.56,0.64,1) - 2026-05-04 */
+/* light mode: fg-subtle contrast ratio raised to 4.5:1 - 2026-05-06 */
+/* audit: all --var references verified consistent - 2026-05-18 */

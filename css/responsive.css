@@ -1,0 +1,202 @@
+/* ============================================================
+   RESPONSIVE — breakpoints: 1024px tablet, 768px phablet, 480px mobile
+   ============================================================ */
+
+/* ── Large tablet / small desktop ── */
+@media (max-width: 1100px) {
+  .about-grid {
+    grid-template-columns: 360px 1fr;
+    gap: var(--sp-10);
+  }
+
+  .portrait-frame {
+    width: 300px;
+    height: 360px;
+  }
+
+  .card-coffee { right: -10px; }
+  .card-status { right: -20px; }
+}
+
+/* ── Tablet ── */
+@media (max-width: 1024px) {
+  /* Nav */
+  .nav-links    { display: none; }
+  .nav-burger   { display: flex; }
+
+  /* Hero */
+  .heading-line { font-size: clamp(2.5rem, 7vw, 4rem); }
+  .heading-sub  { font-size: clamp(1.4rem, 3vw, 2rem); }
+
+  /* Projects — stack to single column on tablet */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured .project-card-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card--featured .project-preview {
+    min-height: 260px;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+
+  .about-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .portrait-frame {
+    width: 280px;
+    height: 320px;
+  }
+
+  .card-coffee { right: -5px; bottom: 20px; }
+  .card-status { right: -5px; top: 20px; }
+
+  /* Stack */
+  .stack-categories {
+    grid-template-columns: 1fr;
+    gap: var(--sp-6);
+  }
+
+  .stack-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--sp-5);
+  }
+
+  /* Contact */
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: var(--sp-10);
+  }
+}
+
+/* ── Phablet ── */
+@media (max-width: 768px) {
+  /* Container */
+  .container { padding-inline: var(--sp-5); }
+
+  /* Section spacing */
+  .section { padding-block: clamp(var(--sp-12), 6vw, var(--sp-20)); }
+
+  /* Nav */
+  .logo-name { display: none; }
+
+  /* Hero */
+  .hero-stats {
+    gap: var(--sp-5);
+    flex-wrap: wrap;
+  }
+
+  .stat-divider { display: none; }
+
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+
+  /* Stack grid */
+  .stack-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Timeline */
+  .timeline-header { flex-direction: column; gap: var(--sp-1); }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-6);
+    padding-block: var(--sp-8);
+  }
+
+  .footer-nav { gap: var(--sp-4); }
+
+  /* Back to top */
+  .back-to-top { bottom: var(--sp-5); right: var(--sp-5); }
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  /* Container */
+  .container { padding-inline: var(--sp-4); }
+
+  /* Section header */
+  .section-title { font-size: clamp(1.75rem, 8vw, 2.25rem); }
+
+  /* Hero */
+  .heading-line { font-size: clamp(2rem, 10vw, 3rem); }
+  .heading-sub  { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+  .hero-desc    { font-size: var(--text-base); }
+
+  /* Project cards */
+  .project-meta { padding: var(--sp-5); }
+  .project-preview { min-height: 180px; padding: var(--sp-5); }
+
+  /* Portrait */
+  .portrait-frame { width: 240px; height: 280px; }
+  .portrait-initials { font-size: 60px; }
+
+  /* Accent cards — hide on very small */
+  .card-coffee, .card-status { display: none; }
+
+  /* Stack grid single column */
+  .stack-grid { grid-template-columns: 1fr; }
+
+  /* Form */
+  .contact-form-wrap { padding: var(--sp-5); }
+
+  /* Timeline */
+  .timeline-item { padding-left: var(--sp-8); }
+
+  /* Nav actions — hide résumé btn on mobile */
+  .nav-actions .btn-outline { display: none; }
+
+  /* Project impact */
+  .project-impact { gap: var(--sp-5); }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .orb-1, .orb-2 { animation: none; }
+  .marquee-track  { animation: none; }
+  .badge-dot      { animation: none; }
+  .scroll-indicator { animation: none; }
+  .scroll-line    { animation: none; }
+  .relay-typing span { animation: none; }
+  .t-cursor       { animation: none; }
+  .floatCard      { animation: none; }
+  .card-coffee, .card-status { animation: none; }
+  .hero-reveal    { animation: none; opacity: 1; transform: none; }
+  .reveal         { transition: none; }
+}
+
+/* ── Print styles ── */
+@media print {
+  .nav-header, .cursor-dot, .cursor-ring,
+  .noise, .hero-grid, .orb,
+  .scroll-indicator, .marquee-strip,
+  .back-to-top, .mobile-menu { display: none !important; }
+
+  body { background: #fff; color: #000; }
+  .section { padding-block: 2rem; break-inside: avoid; }
+  .project-card { break-inside: avoid; border: 1px solid #ccc; }
+  a { color: inherit; }
+}
+/* print: hide nav, cursor, orbs, back-to-top - 2026-03-16 */
+/* 1024px: .nav-links hidden, .nav-burger shown - 2026-03-23 */
+/* 1024px: .projects-grid 1-column, featured resets - 2026-03-24 */
+/* 1024px: .stack-categories grid-template-columns:1fr - 2026-03-25 */
+/* 1024px: .about-grid single column, portrait centred - 2026-03-26 */
+/* 768px: .stat-divider display:none, stats flex-wrap - 2026-03-27 */
+/* 768px: .hero-ctas flex-direction:column - 2026-03-28 */
+/* 480px: heading clamp(2rem,10vw,3rem) applied - 2026-03-30 */
+/* 480px: .logo-name display:none saves nav space - 2026-03-31 */
