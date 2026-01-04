@@ -81,3 +81,4 @@ fieldset { border: none; padding: 0; }
 /* ::selection: background var(--accent) color var(--bg) - 2026-03-17 */
 /* :focus-visible: 2px accent outline, offset 3px - 2026-03-18 */
 /* html: scroll-behavior:smooth added to reset - 2026-06-06 */
+/* reset v1 - 2026-01-04 */
