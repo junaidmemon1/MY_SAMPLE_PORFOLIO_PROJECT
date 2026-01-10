@@ -72,3 +72,4 @@
 })();
 /* theme.js v1: localStorage persistence added - 2026-01-10 */
 /* FOUC prevention: applyTheme() runs on script load - 2026-01-10 */
+/* theme.js v1: localStorage persistence added - 2026-01-10 */
