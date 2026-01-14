@@ -133,3 +133,4 @@
 /* previouslyFocused.focus() on closeMenu() - 2026-03-21 */
 /* passive:true on scroll listener - 2026-04-01 */
 /* history.pushState: URL updated without scroll trigger - 2026-04-30 */
+/* nav.js v1: burger open/close, aria-expanded - 2026-01-14 */
