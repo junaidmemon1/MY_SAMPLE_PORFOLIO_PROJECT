@@ -135,3 +135,4 @@
 /* history.pushState: URL updated without scroll trigger - 2026-04-30 */
 /* nav.js v1: burger open/close, aria-expanded - 2026-01-14 */
 /* smooth scroll: NAV_HEIGHT=64 offset applied - 2026-01-14 */
+/* IntersectionObserver: active nav-link class toggled - 2026-01-15 */
