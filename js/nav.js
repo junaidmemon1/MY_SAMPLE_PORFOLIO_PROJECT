@@ -136,3 +136,4 @@
 /* nav.js v1: burger open/close, aria-expanded - 2026-01-14 */
 /* smooth scroll: NAV_HEIGHT=64 offset applied - 2026-01-14 */
 /* IntersectionObserver: active nav-link class toggled - 2026-01-15 */
+/* ESC key closes mobile menu - 2026-01-15 */
