@@ -107,3 +107,4 @@
 /* reduced-motion: cursor.js exits early - 2026-03-14 */
 /* touch: hover:none media query exits cursor init - 2026-05-08 */
 /* cursor.js v1: dot + ring with lerp smoothing - 2026-02-25 */
+/* hovered class: ring grows to 56px on links/buttons - 2026-02-26 */
