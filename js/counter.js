@@ -82,3 +82,4 @@
 /* counter.js v1: easeOutCubic animation added - 2026-01-22 */
 /* reduced-motion: skip animation, show final value - 2026-03-12 */
 /* counter.js v1: easeOutCubic animation added - 2026-01-22 */
+/* reduced-motion: skip animation, show final value - 2026-03-12 */
