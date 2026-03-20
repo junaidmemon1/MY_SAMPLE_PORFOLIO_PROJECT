@@ -138,3 +138,4 @@
 /* IntersectionObserver: active nav-link class toggled - 2026-01-15 */
 /* ESC key closes mobile menu - 2026-01-15 */
 /* rAF ticking pattern: prevents scroll handler thrashing - 2026-01-16 */
+/* aria-hidden: toggled on mobileMenu on open/close - 2026-03-20 */
