@@ -207,3 +207,4 @@
 /* 1024px: .about-grid single column, portrait centred - 2026-03-26 */
 /* 768px: .stat-divider display:none, stats flex-wrap - 2026-03-27 */
 /* 768px: .hero-ctas flex-direction:column - 2026-03-28 */
+/* 480px: heading clamp(2rem,10vw,3rem) applied - 2026-03-30 */
