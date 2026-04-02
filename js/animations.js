@@ -130,3 +130,4 @@
 /* skill IntersectionObserver threshold: 0.5 - 2026-05-09 */
 /* animations.js v1: .reveal IntersectionObserver - 2026-02-27 */
 /* reduced-motion: reveal elements shown immediately - 2026-03-13 */
+/* unobserve() after reveal.visible — GC friendly - 2026-04-02 */
