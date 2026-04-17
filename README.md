@@ -63,3 +63,4 @@ MIT
 
 
 <!-- Updated: 2026-01-03 -->
+<!-- README: local dev, GitHub Pages, Netlify steps - 2026-04-17 -->
