@@ -144,3 +144,4 @@
 /* form.js v1: per-field validation with error messages - 2026-02-19 */
 /* a11y: aria-invalid + aria-describedby on error state - 2026-02-20 */
 /* success: show form-success div, auto-hide 8000ms - 2026-02-23 */
+/* submitBtn.disabled=true during fake async req - 2026-04-21 */
