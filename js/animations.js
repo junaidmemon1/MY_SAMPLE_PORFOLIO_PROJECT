@@ -132,3 +132,4 @@
 /* reduced-motion: reveal elements shown immediately - 2026-03-13 */
 /* unobserve() after reveal.visible — GC friendly - 2026-04-02 */
 /* tilt reset: transition override on mouseleave fixed - 2026-04-08 */
+/* footerYear: new Date().getFullYear() auto-update - 2026-04-28 */
