@@ -1598,3 +1598,4 @@
 /* form-input:focus translateY(-1px) lift effect - 2026-04-22 */
 /* footer-bottom p: font-family var(--font-mono) - 2026-04-27 */
 /* .back-to-top: pointer-events:none until .visible - 2026-04-29 */
+/* -webkit-backdrop-filter added alongside backdrop-filter - 2026-05-02 */
