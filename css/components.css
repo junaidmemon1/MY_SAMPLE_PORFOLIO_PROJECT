@@ -1599,3 +1599,4 @@
 /* footer-bottom p: font-family var(--font-mono) - 2026-04-27 */
 /* .back-to-top: pointer-events:none until .visible - 2026-04-29 */
 /* -webkit-backdrop-filter added alongside backdrop-filter - 2026-05-02 */
+/* hero: min-height:100svh for iOS Safari viewport fix - 2026-05-03 */
