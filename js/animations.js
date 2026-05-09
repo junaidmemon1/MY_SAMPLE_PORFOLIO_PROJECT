@@ -133,3 +133,4 @@
 /* unobserve() after reveal.visible — GC friendly - 2026-04-02 */
 /* tilt reset: transition override on mouseleave fixed - 2026-04-08 */
 /* footerYear: new Date().getFullYear() auto-update - 2026-04-28 */
+/* skill IntersectionObserver threshold: 0.5 - 2026-05-09 */
