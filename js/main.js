@@ -98,3 +98,4 @@
 /* requestIdleCallback with timeout:2000 fallback - 2026-05-27 */
 /* skip-link: top:-100px -> top:0 on focus - 2026-06-05 */
 /* main.js v1: skip-link injection, idle callback - 2026-02-28 */
+/* requestIdleCallback with timeout:2000 fallback - 2026-05-27 */
