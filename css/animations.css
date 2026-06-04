@@ -199,3 +199,4 @@ body {
 /* will-change:transform on .cursor-dot + .cursor-ring - 2026-04-03 */
 /* keyframes: orbFloat, heroFadeUp, blink, cursorBlink moved - 2026-04-07 */
 /* hero-reveal vs reveal: separate animation patterns - 2026-05-12 */
+/* body pageFadeIn: opacity 0->1 on load - 2026-06-04 */
