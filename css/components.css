@@ -1611,3 +1611,4 @@
 /* unused selectors removed: .project-cta orphan rule - 2026-05-29 */
 /* .lu-bar: height:var(--h) — dynamic bar heights - 2026-06-08 */
 /* .pulse-metric span: color var(--teal) - 2026-06-09 */
+/* lint: duplicate declarations removed, clean pass - 2026-06-11 */
