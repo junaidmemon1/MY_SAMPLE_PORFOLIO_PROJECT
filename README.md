@@ -69,3 +69,4 @@ MIT
 <!-- README: linkedin.com/in/junaid-memon-221548346 added - 2026-06-03 -->
 <!-- final review: v1.0.0 release ready - 2026-06-15 -->
 <!-- Netlify: drag-drop + GitHub connect instructions - 2026-06-15 -->
+<!-- RELEASE v1.0.0: portfolio.junaidmemon.dev - 2026-06-15 -->
