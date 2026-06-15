@@ -67,3 +67,4 @@ MIT
 <!-- tested: Chrome 120, Firefox 121, Safari 17 - 2026-05-01 -->
 <!-- README: git history replay bash script docs - 2026-05-19 -->
 <!-- README: linkedin.com/in/junaid-memon-221548346 added - 2026-06-03 -->
+<!-- final review: v1.0.0 release ready - 2026-06-15 -->
