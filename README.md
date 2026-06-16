@@ -1,10 +1,10 @@
-# Junaid Ahmed Memon — Portfolio
+# Junaid Ahmed Memon — Sample Portfolio
 
-Personal portfolio website built with **pure vanilla HTML, CSS, and JavaScript**.
+Sample Personal portfolio website built with **pure vanilla HTML, CSS, and JavaScript**.
 No frameworks, no build tools, no npm — just open `index.html`.
 
 **IBM Certified Full-Stack Software Developer & AI Engineer**
-BS Computer Science (5th Semester) — SZABIST, Gharo Campus
+BS Computer Science (5th Semester) — SZABIST.
 
 ---
 
@@ -49,11 +49,13 @@ Hosted on GitHub Pages / Netlify.
 ## 🔗 Links
 
 - LinkedIn: https://linkedin.com/in/junaid-memon-221548346
-- GitHub: https://github.com/junaidmemon
+- GitHub: https://github.com/junaidmemon1
 
 ## 📄 License
 
 MIT
+## Developer:
+Junaid Ahmed Memon
 
 
 
